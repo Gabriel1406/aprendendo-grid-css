@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Grid CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100dvh;
+        }
+
+        .item {
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 200%;
+        }
+
+        .conteiner {
+            height: 100%;
+            display: grid;
+            grid-template-rows: repeat(8 1fr) 100px;
+            grid-template-columns: repeat(5 1fr);
+            gap: 5px;
+        }
+
+        .elemento1 {
+            background-color: red;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .elemento2 {
+            background-color: green;
+            grid-row: 2 / 4;
+            grid-column: 1 / 5;
+        }
+
+        .elemento3 {
+            background-color: yellow;
+            grid-row: 4 / 7;
+            grid-column: 1 / 4;
+        }
+
+        .elemento4 {
+            background-color: blue;
+            grid-row: 4 / 7 ;
+            grid-column: 4 / 5;
+        }
+
+        .elemento5 {
+            background-color: hotpink;
+            grid-row: 7 / 8;
+            grid-column: 1 / 3
+        }
+
+        .elemento6 {
+           background-color: rgb(158, 7, 245);
+           grid-row: 7 / 8;
+            grid-column: 3 / 5
+        }
+    </style>
+</head>
+
+<body>
+    <section class="conteiner">
+        <div class="item elemento1">1</div>
+        <div class="item elemento2">2</div>
+        <div class="item elemento3">3</div>
+        <div class="item elemento4">4</div>
+        <div class="item elemento5">5</div>
+        <div class="item elemento6">6</div>
+    </section>
+</body>
+
+</html>
